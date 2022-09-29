@@ -1391,6 +1391,7 @@ function shareCodesFormat() {
       newShareCodes = shareCodes[tempIndex] ? shareCodes[tempIndex].split('@') : []
     }
     const readShareCodeRes = await readShareCode();
+    const readShareCodeRes = null;
     if (readShareCodeRes && readShareCodeRes.code === 200) {
       newShareCodes = [...new Set([...newShareCodes, ...(readShareCodeRes.data || [])])];
     }
